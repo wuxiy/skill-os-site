@@ -1,0 +1,425 @@
+[
+  {
+    "id": "agent-loop",
+    "title": "Agent 为什么能执行任务（Agent Loop）",
+    "description": "通过可操作的运行环境理解 Agent Loop：状态、行动、观察与停止条件",
+    "domain": "agent-systems",
+    "level": "intermediate",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "llm-request-lifecycle"
+    ],
+    "concepts": [
+      "observation",
+      "reasoning",
+      "action",
+      "state",
+      "stop-condition"
+    ],
+    "tags": [
+      "agent",
+      "loop",
+      "tool"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "agent-memory",
+    "title": "Agent 的记忆系统如何分层",
+    "description": "工作记忆、长期记忆与用户记忆：写入、召回与缺失失败",
+    "domain": "agent-systems",
+    "level": "intermediate",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "agent-loop"
+    ],
+    "concepts": [
+      "working-memory",
+      "long-term-memory",
+      "user-memory",
+      "recall",
+      "persistence"
+    ],
+    "tags": [
+      "agent",
+      "memory",
+      "context"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "agent-paradigms",
+    "title": "三种经典范式：ReAct、Plan-and-Solve 与 Reflection",
+    "description": "同一任务在三种范式下的执行轨迹：结构差异与故障命运",
+    "domain": "agent-systems",
+    "level": "intermediate",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "agent-loop"
+    ],
+    "concepts": [
+      "react",
+      "plan-and-solve",
+      "reflection",
+      "paradigm",
+      "reasoning"
+    ],
+    "tags": [
+      "agent",
+      "patterns",
+      "prompting"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "agent-protocols",
+    "title": "MCP、A2A 与 Skills：Agent 的连接层",
+    "description": "模型连工具、Agent 连 Agent、能力可复用：三层协议各管一段",
+    "domain": "agent-systems",
+    "level": "intermediate",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "tool-use"
+    ],
+    "concepts": [
+      "mcp",
+      "a2a",
+      "skills",
+      "discovery",
+      "delegation"
+    ],
+    "tags": [
+      "agent",
+      "protocol",
+      "interop"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "agentic-rl",
+    "title": "Agentic RL：从 SFT 模仿到 GRPO 相对奖励",
+    "description": "为什么模仿会泛化失败，组内相对奖励如何让策略真正进步",
+    "domain": "ai-engineering",
+    "level": "advanced",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "reward-modeling"
+    ],
+    "concepts": [
+      "sft",
+      "grpo",
+      "advantage",
+      "policy",
+      "generalization"
+    ],
+    "tags": [
+      "rl",
+      "training",
+      "post-training"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "context-engineering",
+    "title": "上下文工程：有限的窗口装什么",
+    "description": "上下文预算如何在系统提示、历史、RAG 与工具结果间分配",
+    "domain": "ai-engineering",
+    "level": "intermediate",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "llm-request-lifecycle"
+    ],
+    "concepts": [
+      "context-window",
+      "token-budget",
+      "truncation",
+      "summarization",
+      "priority"
+    ],
+    "tags": [
+      "context",
+      "prompt",
+      "engineering"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "evals",
+    "title": "Evals：怎么知道模型变好了",
+    "description": "评测集、判分、聚合与两配置间的回归对比",
+    "domain": "ai-engineering",
+    "level": "intermediate",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "agent-loop"
+    ],
+    "concepts": [
+      "eval-dataset",
+      "scoring",
+      "aggregation",
+      "regression",
+      "comparison"
+    ],
+    "tags": [
+      "evals",
+      "evaluation",
+      "testing"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "graders",
+    "title": "Graders：评分器也在犯错",
+    "description": "精确匹配、Rubric 与 LLM-as-Judge 的评分分歧与偏差",
+    "domain": "ai-engineering",
+    "level": "advanced",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "evals"
+    ],
+    "concepts": [
+      "exact-match",
+      "rubric",
+      "llm-as-judge",
+      "grader-bias",
+      "score"
+    ],
+    "tags": [
+      "evals",
+      "graders",
+      "llm-judge"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "harness-engineering",
+    "title": "Harness Engineering：给 Agent 装上刹车与黑匣子",
+    "description": "权限门、验证器、日志与回放：工程层如何决定 Agent 的可靠性",
+    "domain": "ai-engineering",
+    "level": "advanced",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "agent-loop"
+    ],
+    "concepts": [
+      "harness",
+      "permission",
+      "verification",
+      "logging",
+      "replay"
+    ],
+    "tags": [
+      "agent",
+      "safety",
+      "reliability"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "llm-request-lifecycle",
+    "title": "一次 LLM 请求发生了什么",
+    "description": "从 Prompt 到逐 Token 生成：亲手操作分词、温度采样与上下文窗口",
+    "domain": "llm-fundamentals",
+    "level": "beginner",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [],
+    "concepts": [
+      "token",
+      "embedding",
+      "transformer",
+      "logits",
+      "sampling",
+      "temperature",
+      "autoregressive",
+      "context-window",
+      "kv-cache"
+    ],
+    "tags": [
+      "llm",
+      "tokenizer",
+      "generation"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "multi-agent",
+    "title": "Multi-Agent：任务如何被编排",
+    "description": "编排器、子代理分工、结果交接与失败传播",
+    "domain": "agent-systems",
+    "level": "advanced",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "agent-loop"
+    ],
+    "concepts": [
+      "orchestrator",
+      "subagent",
+      "decomposition",
+      "handoff",
+      "degradation"
+    ],
+    "tags": [
+      "agent",
+      "multi-agent",
+      "orchestration"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "rag-basics",
+    "title": "RAG 为什么有效，也为什么失效",
+    "description": "通过可操作的检索实验理解 RAG 的召回机制、Rerank 与失败模式",
+    "domain": "retrieval-systems",
+    "level": "beginner",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.2.0",
+    "prerequisites": [
+      "llm-request-lifecycle"
+    ],
+    "concepts": [
+      "chunk",
+      "embedding",
+      "vector-index",
+      "similarity",
+      "top-k",
+      "context-assembly"
+    ],
+    "tags": [
+      "rag",
+      "retrieval",
+      "vector-search"
+    ],
+    "lastReviewed": "2026-07-17",
+    "video": "recordings/rag-basics.webm"
+  },
+  {
+    "id": "reward-modeling",
+    "title": "奖励模型与奖励黑客",
+    "description": "奖励是偏好的代理：打分逻辑、代理缺口与 Reward Hacking",
+    "domain": "ai-engineering",
+    "level": "advanced",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "graders"
+    ],
+    "concepts": [
+      "reward-model",
+      "preference-pairs",
+      "proxy",
+      "reward-hacking",
+      "optimization"
+    ],
+    "tags": [
+      "rlhf",
+      "reward",
+      "alignment"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "system-one-models",
+    "title": "System One 模型：Jev 与校准决策",
+    "description": "不生成文字的决策模型：typed 输出、单次并行前向与 RLCD 校准训练",
+    "domain": "ai-engineering",
+    "level": "intermediate",
+    "duration": 20,
+    "status": "published",
+    "version": "1.0.0",
+    "prerequisites": [
+      "llm-request-lifecycle",
+      "reward-modeling"
+    ],
+    "concepts": [
+      "system-one-model",
+      "typed-output",
+      "parallel-inference",
+      "calibrated-confidence",
+      "rlcd"
+    ],
+    "tags": [
+      "jev",
+      "typesafe",
+      "classification",
+      "routing",
+      "guardrail"
+    ],
+    "lastReviewed": "2026-09-22"
+  },
+  {
+    "id": "tool-use",
+    "title": "工具调用：模型如何学会使用工具",
+    "description": "从意图到工具：选择、参数抽取、校验与调用的完整链路",
+    "domain": "agent-systems",
+    "level": "intermediate",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "llm-request-lifecycle"
+    ],
+    "concepts": [
+      "tool-schema",
+      "tool-selection",
+      "argument-extraction",
+      "dispatch",
+      "validation"
+    ],
+    "tags": [
+      "agent",
+      "tool",
+      "function-calling"
+    ],
+    "lastReviewed": "2026-07-17"
+  },
+  {
+    "id": "trace-analysis",
+    "title": "Trace Analysis：从轨迹里找问题",
+    "description": "执行轨迹的统计与异常检测：循环、重试风暴、成本尖峰、上下文膨胀",
+    "domain": "ai-engineering",
+    "level": "advanced",
+    "duration": 15,
+    "status": "draft",
+    "version": "0.1.0",
+    "prerequisites": [
+      "agent-loop"
+    ],
+    "concepts": [
+      "trace",
+      "anomaly-detection",
+      "observability",
+      "cost",
+      "debugging"
+    ],
+    "tags": [
+      "agent-ops",
+      "monitoring",
+      "diagnosis"
+    ],
+    "lastReviewed": "2026-07-17"
+  }
+]
